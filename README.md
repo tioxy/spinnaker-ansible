@@ -9,7 +9,7 @@
 ## [Purpose](#purpose)
 -----
 
-It was made to install Halyard and some tools which are necessary to make Spinnaker and AWS to work properly. This version only supports Halyard installation, but Spinnaker Configuration and Deployment will be added in the future.
+This playbook and roles were made to install Halyard and some tools which are necessary to make Spinnaker and AWS integration to work properly. This version only supports Halyard installation, but Spinnaker Configuration and Deployment will be added in the future.
 
 By running this playbook, you will install:
 - [aws-iam-authenticator](roles/aws-iam-authenticator/README.md)
