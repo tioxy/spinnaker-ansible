@@ -1,0 +1,9 @@
+---
+- hosts: all
+
+  roles:
+    - role: docker
+    - role: kubectl
+    - role: awscli
+    - role: aws-iam-authenticator
+    - role: halyard

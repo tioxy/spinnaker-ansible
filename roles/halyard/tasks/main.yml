@@ -1,0 +1,16 @@
+---
+- name: Getting installation script
+  get_url:
+    url: "{{ HALYARD_INSTALLATION_SCRIPT }}"
+    dest: ~/InstallHalyard.sh
+    mode: 0440
+
+
+- name: Running installation script
+  command: "bash /home/{{ ansible_ssh_user }}/InstallHalyard.sh --user {{ ansible_ssh_user }} -y"
+  become: true
+
+
+- name: Updating halyard
+  command: update-halyard
+  become: true

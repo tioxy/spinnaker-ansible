@@ -1,0 +1,3 @@
+---
+GOOGLE_GPG_KEY: https://packages.cloud.google.com/apt/doc/apt-key.gpg
+KUBECTL_REPO: deb http://apt.kubernetes.io/ kubernetes-xenial main
