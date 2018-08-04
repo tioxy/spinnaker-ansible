@@ -1,4 +1,4 @@
-# If you want to know the commands by any reason
+# If you want to know the commands for any reason
 # Updating OS
 sudo apt-get update
 sudo apt-get upgrade
