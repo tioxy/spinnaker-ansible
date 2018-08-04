@@ -1,0 +1,18 @@
+---
+- name: Apt update cache
+  apt:
+    update_cache: yes
+  become: true
+
+- name: Installing python3 and pip
+  apt:
+    name: "{{ PYTHON_PACKAGES }}"
+    update_cache: yes
+  become: true
+
+- name: Installing awscli
+  pip:
+    name: awscli
+    state: latest
+    executable: pip3
+  become: true

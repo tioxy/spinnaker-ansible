@@ -1,0 +1,43 @@
+---
+- name: Updating apt cache
+  apt:
+    update_cache: yes
+  become: true
+
+
+- name: Installing requirements
+  apt:
+    name: "{{ DOCKER_REQUIREMENTS }}"
+    state: latest
+  become: true
+
+
+- name: Adding docker gpg key
+  apt_key:
+    url: "{{ DOCKER_GPG_KEY }}"
+    state: present
+  become: true
+
+
+- name: Adding docker repository
+  apt_repository:
+    repo: "{{ DOCKER_REPO }}"
+    state: present
+    filename: kubernetes
+    update_cache: yes
+  become: true
+
+
+- name: Installing docker
+  apt:
+    name: docker-ce
+    state: latest
+  become: true
+
+
+- name: Enabling docker service
+  systemd:
+    name: docker
+    state: started
+    enabled: yes
+  become: true

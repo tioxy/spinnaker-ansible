@@ -1,0 +1,8 @@
+---
+DOCKER_GPG_KEY: https://download.docker.com/linux/ubuntu/gpg
+DOCKER_REPO: deb [arch=amd64] https://download.docker.com/linux/ubuntu xenial stable
+DOCKER_REQUIREMENTS:
+  - apt-transport-https
+  - ca-certificates
+  - curl
+  - software-properties-common

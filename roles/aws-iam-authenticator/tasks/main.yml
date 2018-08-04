@@ -1,0 +1,32 @@
+---
+- name: Adding golang repository
+  apt_repository:
+    repo: "{{ GOLANG_REPO }}"
+    state: present
+  become: true
+
+
+- name: Apt update cache
+  apt:
+    update_cache: yes
+  become: true
+
+
+- name: Installing golang
+  apt:
+    name: "{{ GOLANG_PACKAGE }}"
+    state: latest
+  become: true
+
+
+- name: Installing aws-iam-authenticator
+  command: go get -u -v github.com/kubernetes-sigs/aws-iam-authenticator/cmd/aws-iam-authenticator
+
+
+- name: Moving aws-iam-authenticator binary
+  copy:
+    src: "/home/{{ ansible_ssh_user }}/go/bin/aws-iam-authenticator"
+    dest: /usr/bin/aws-iam-authenticator
+    mode: 0751
+    remote_src: true
+  become: true
