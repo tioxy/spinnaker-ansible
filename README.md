@@ -6,6 +6,7 @@
 #### - [Getting Started](README.md#getting-started)
 
 </br>
+
 ## [Purpose](#purpose)
 -----
 
@@ -19,6 +20,7 @@ By running this playbook, you will install:
 - [kubectl](roles/kubectl/README.md)
 
 </br>
+
 ## [Requirements](#requirements)
 [Click here](README.md#getting-started) if you already have all requirements
 
@@ -32,6 +34,7 @@ By running this playbook, you will install:
 - PIP
 
 </br>
+
 #### Installing Requirements
 
 1. Install Python and PIP
@@ -53,6 +56,7 @@ sudo -i pip install --upgrade ansible
 ```
 
 </br>
+
 ## [Getting Started](#getting-started)
 -----
 1. Clone the repository
