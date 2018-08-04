@@ -31,6 +31,7 @@ By running this playbook, you will install:
 #### Your host
 - Python >= 2.7
 - PIP
+- Ansible >= 2.6
 
 </br>
 
